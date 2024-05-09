@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Winter\\LaravelConfigWriter\\": "src/"
+            "Devdojo\\ConfigWriter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Winter\\LaravelConfigWriter\\Tests\\": "tests/"
+            "Devdojo\\ConfigWriter\\": "tests/"
         }
     }
 }
