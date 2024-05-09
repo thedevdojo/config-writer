@@ -79,15 +79,20 @@ class ArrayFile extends DataFile implements DataFileInterface
             throw new \InvalidArgumentException('file not found');
         }
 
-        $lexer = new Lexer\Emulative([
+        // Configure the Lexer options, including usedAttributes
+        $lexerOptions = [
             'usedAttributes' => [
                 'comments',
                 'startTokenPos',
                 'startLine',
                 'endTokenPos',
-                'endLine'
-            ]
-        ]);
+                'endLine',
+            ],
+        ];
+
+        // Instantiate the Lexer with default PHP version (null) and lexer options
+        $lexer = new Lexer\Emulative(null, $lexerOptions);
+
         $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7, $lexer);
 
         try {
@@ -96,7 +101,7 @@ class ArrayFile extends DataFile implements DataFileInterface
                     ? file_get_contents($filePath)
                     : sprintf('<?php%1$s%1$sreturn [];%1$s', "\n")
             );
-        } catch (Error $e) {
+        } catch (\PhpParser\Error $e) {
             throw new ConfigWriterException($e);
         }
 
