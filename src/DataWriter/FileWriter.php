@@ -52,9 +52,7 @@ class FileWriter
      */
     public function write(string $item, $value, string $filename, string $fileExtension = '.php'): bool
     {
-        $path = $this->getPath($item, $filename, $fileExtension);
-
-        if (!$path) return false;
+        $path = $filename;
 
         $contents = $this->files->get($path);
         $contents = $this->rewriter->toContent($contents, [$item => $value]);
@@ -66,6 +64,7 @@ class FileWriter
     {
         $file = "{$this->defaultPath}/{$filename}{$ext}";
 
+        dd($file);
         if ($this->files->exists($file) && $this->hasKey($file, $item)) {
             return $file;
         }

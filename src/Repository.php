@@ -37,7 +37,8 @@ class Repository extends RepositoryBase
      */
     public function write(string $key, $value): bool
     {
-        list($filename, $item) = $this->parseKey($key);
+        list($filename, $item) = $this->getFileAndReturnConfigProperty($key);
+
         $result = $this->writer->write($item, $value, $filename);
 
         if(!$result) throw new Exception('File could not be written to');
@@ -45,6 +46,30 @@ class Repository extends RepositoryBase
         $this->set($key, $value);
 
         return $result;
+    }
+
+    private function getFileAndReturnConfigProperty(string $key): array
+    {
+        $pathParts = explode('.', $key);
+        $path = base_path('config');
+        $foundFile = null;
+        $remainingKey = '';
+
+        for ($i = 0; $i < count($pathParts); $i++) {
+            $path .= '/' . $pathParts[$i];
+            $testPath = $path . '.php';
+            if (file_exists($testPath)) {
+                $foundFile = $testPath;
+                $remainingKey = implode('.', array_slice($pathParts, $i + 1));
+                break;
+            }
+        }
+
+        if (!$foundFile) {
+            throw new Exception("Configuration file for '{$key}' not found.");
+        }
+
+        return [$foundFile, $remainingKey];
     }
 
     /**
