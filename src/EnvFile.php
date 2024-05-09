@@ -1,12 +1,12 @@
 <?php
 
-namespace Winter\LaravelConfigWriter;
+namespace Devdojo\ConfigWriter;
 
-use Winter\LaravelConfigWriter\Contracts\DataFileInterface;
-use Winter\LaravelConfigWriter\Contracts\DataFileLexerInterface;
-use Winter\LaravelConfigWriter\Contracts\DataFilePrinterInterface;
-use Winter\LaravelConfigWriter\Parser\EnvLexer;
-use Winter\LaravelConfigWriter\Printer\EnvPrinter;
+use Devdojo\ConfigWriter\Contracts\DataFileInterface;
+use Devdojo\ConfigWriter\Contracts\DataFileLexerInterface;
+use Devdojo\ConfigWriter\Contracts\DataFilePrinterInterface;
+use Devdojo\ConfigWriter\Parser\EnvLexer;
+use Devdojo\ConfigWriter\Printer\EnvPrinter;
 
 /**
  * Class EnvFile

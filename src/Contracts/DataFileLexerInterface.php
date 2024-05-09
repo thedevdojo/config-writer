@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\LaravelConfigWriter\Contracts;
+namespace Devdojo\ConfigWriter\Contracts;
 
 interface DataFileLexerInterface
 {

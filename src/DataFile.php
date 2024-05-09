@@ -1,8 +1,8 @@
 <?php
 
-namespace Winter\LaravelConfigWriter;
+namespace Devdojo\ConfigWriter;
 
-use Winter\LaravelConfigWriter\Contracts\DataFileInterface;
+use Devdojo\ConfigWriter\Contracts\DataFileInterface;
 
 abstract class DataFile implements DataFileInterface
 {

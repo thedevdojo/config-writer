@@ -1,9 +1,9 @@
 <?php
 
-namespace Winter\LaravelConfigWriter\Parser;
+namespace Devdojo\ConfigWriter\Parser;
 
-use Winter\LaravelConfigWriter\Contracts\DataFileLexerInterface;
-use Winter\LaravelConfigWriter\Exceptions\EnvParserException;
+use Devdojo\ConfigWriter\Contracts\DataFileLexerInterface;
+use Devdojo\ConfigWriter\Exceptions\EnvParserException;
 
 class EnvLexer implements DataFileLexerInterface
 {

@@ -1,28 +1,26 @@
 # Laravel Config Writer
 
-[![Version](https://img.shields.io/github/v/release/wintercms/laravel-config-writer?sort=semver&style=flat-square)](https://github.com/wintercms/laravel-config-writer/releases)
-[![Tests](https://img.shields.io/github/actions/workflow/status/wintercms/laravel-config-writer/tests.yaml?&label=tests&style=flat-square)](https://github.com/wintercms/laravel-config-writer/actions)
-[![License](https://img.shields.io/github/license/wintercms/laravel-config-writer?label=open%20source&style=flat-square)](https://packagist.org/packages/winter/laravel-config-writer)
+[![Version](https://img.shields.io/github/v/release/devdojo/config-writer?sort=semver&style=flat-square)](https://github.com/devdojo/config-writer/releases)
+[![Tests](https://img.shields.io/github/actions/workflow/status/devdojo/config-writer/tests.yaml?&label=tests&style=flat-square)](https://github.com/devdojo/config-writer/actions)
+[![License](https://img.shields.io/github/license/devdojo/config-writer?label=open%20source&style=flat-square)](https://packagist.org/packages/devdojo/config-writer)
 [![Discord](https://img.shields.io/discord/816852513684193281?label=discord&style=flat-square)](https://discord.gg/D5MFSPH6Ux)
 
 A utility to easily create and modify Laravel-style PHP configuration files and environment files whilst maintaining the formatting and comments contained within. This utility works by parsing the configuration files using the [PHP Parser library](https://github.com/nikic/php-parser) to convert the configuration into an abstract syntax tree, then carefully modifying the configuration values as required.
 
-This library was originally written as part of the [Storm library](https://github.com/wintercms/storm) in [Winter CMS](https://wintercms.com), but has since been extracted and repurposed as a standalone library.
-
 ## Installation
 
 ```
-composer require winter/laravel-config-writer
+composer require devdojo/config-writer
 ```
 
 ## Usage
 
 ### PHP array files
 
-You can modify Laravel-style PHP configuration files - PHP files that return a single array - by using the `Winter\LaravelConfigWriter\ArrayFile` class. Use the `open` method to open an existing file for modification, or to create a new config file.
+You can modify Laravel-style PHP configuration files - PHP files that return a single array - by using the `Devdojo\ConfigWriter\ArrayFile` class. Use the `open` method to open an existing file for modification, or to create a new config file.
 
 ```php
-use Winter\LaravelConfigWriter\ArrayFile;
+use Devdojo\ConfigWriter\ArrayFile;
 
 $config = ArrayFile::open(base_path('config/app.php'));
 ```
@@ -110,10 +108,10 @@ $config->sort(ArrayFile::SORT_DESC);
 
 ### Environment files
 
-This utility library also allows manipulation of environment files, typically found as `.env` files in a project. The `Winter\LaravelConfigWriter\EnvFile::open()` method allows you to open or create an environment file for modification.
+This utility library also allows manipulation of environment files, typically found as `.env` files in a project. The `Devdojo\ConfigWriter\EnvFile::open()` method allows you to open or create an environment file for modification.
 
 ```php
-use Winter\LaravelConfigWriter\EnvFile;
+use Devdojo\ConfigWriter\EnvFile;
 
 $env = EnvFile::open(base_path('.env'));
 ```

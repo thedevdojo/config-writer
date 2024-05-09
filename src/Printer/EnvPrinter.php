@@ -1,9 +1,9 @@
 <?php
 
-namespace Winter\LaravelConfigWriter\Printer;
+namespace Devdojo\ConfigWriter\Printer;
 
-use Winter\LaravelConfigWriter\Contracts\DataFilePrinterInterface;
-use Winter\LaravelConfigWriter\Parser\EnvLexer;
+use Devdojo\ConfigWriter\Contracts\DataFilePrinterInterface;
+use Devdojo\ConfigWriter\Parser\EnvLexer;
 
 class EnvPrinter implements DataFilePrinterInterface
 {

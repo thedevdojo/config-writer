@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\LaravelConfigWriter;
+namespace Devdojo\ConfigWriter;
 
 use PhpParser\Error;
 use PhpParser\Lexer;
@@ -14,11 +14,11 @@ use PhpParser\Node\Scalar\String_;
 use PhpParser\Node\Scalar\LNumber;
 use PhpParser\Node\Stmt;
 use PhpParser\ParserFactory;
-use Winter\LaravelConfigWriter\Contracts\DataFileInterface;
-use Winter\LaravelConfigWriter\Exceptions\ConfigWriterException;
-use Winter\LaravelConfigWriter\Parser\PHPConstant;
-use Winter\LaravelConfigWriter\Parser\PHPFunction;
-use Winter\LaravelConfigWriter\Printer\ArrayPrinter;
+use Devdojo\ConfigWriter\Contracts\DataFileInterface;
+use Devdojo\ConfigWriter\Exceptions\ConfigWriterException;
+use Devdojo\ConfigWriter\Parser\PHPConstant;
+use Devdojo\ConfigWriter\Parser\PHPFunction;
+use Devdojo\ConfigWriter\Printer\ArrayPrinter;
 
 class ArrayFile extends DataFile implements DataFileInterface
 {

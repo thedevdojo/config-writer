@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\LaravelConfigWriter\Printer;
+namespace Devdojo\ConfigWriter\Printer;
 
 use PhpParser\Lexer;
 use PhpParser\Node;
