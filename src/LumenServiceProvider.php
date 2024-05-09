@@ -1,9 +1,9 @@
 <?php
 
-namespace October\Rain\Config;
+namespace Devdojo\ConfigWriter;
 
 use Laravel\Lumen\Application;
-use October\Rain\Config\ServiceProvider;
+use Devdojo\ConfigWriter\ServiceProvider;
 
 class LumenServiceProvider extends ServiceProvider
 {

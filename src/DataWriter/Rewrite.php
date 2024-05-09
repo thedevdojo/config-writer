@@ -1,6 +1,6 @@
 <?php
 
-namespace October\Rain\Config\DataWriter;
+namespace Devdojo\ConfigWriter\DataWriter;
 
 use Exception;
 

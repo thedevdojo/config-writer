@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "October\\Rain\\Config\\": "src/"
+            "Devdojo\\ConfigWriter\\": "src/"
         }
     },
     "scripts": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "October\\Rain\\Config\\ServiceProvider"
+                "Devdojo\\ConfigWriter\\ServiceProvider"
             ]
         }
     },

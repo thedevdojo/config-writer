@@ -1,9 +1,9 @@
 <?php
 
-namespace October\Rain\Config;
+namespace Devdojo\ConfigWriter;
 
 use Exception;
-use October\Rain\Config\DataWriter\FileWriter;
+use Devdojo\ConfigWriter\DataWriter\FileWriter;
 use Illuminate\Config\Repository as RepositoryBase;
 
 class Repository extends RepositoryBase
@@ -11,14 +11,14 @@ class Repository extends RepositoryBase
     /**
      * The config rewriter object.
      *
-     * @var October\Rain\Config\FileWriter
+     * @var Devdojo\ConfigWriter\FileWriter
      */
     protected $writer;
 
     /**
      * Create a new configuration repository.
      *
-     * @param  October\Rain\Config\FileWriter $writer
+     * @param  Devdojo\ConfigWriter\FileWriter $writer
      * @param  array $items
      * @return void
      */

@@ -1,10 +1,10 @@
 <?php
 
-namespace October\Rain\Config;
+namespace Devdojo\ConfigWriter;
 
-use October\Rain\Config\Repository;
+use Devdojo\ConfigWriter\Repository;
 use Illuminate\Filesystem\Filesystem;
-use October\Rain\Config\DataWriter\FileWriter;
+use Devdojo\ConfigWriter\DataWriter\FileWriter;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
